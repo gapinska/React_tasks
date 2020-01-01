@@ -4,16 +4,18 @@ class App extends React.Component {
     }
 
     handleClick= () => {
+        const number = Math.floor(Math.random() * 10)
         this.setState({
-            text: this.state.text + "a"
+            text: this.state.text + number
         }) 
 
     }
 
     render (){
+        const btnName= "stwórz liczbę"
         return (
         <>
-        <button onClick={this.handleClick}>Add A</button>
+    <button onClick={this.handleClick}>{btnName}</button>
         <PanelResult text={this.state.text}/>
         </>
         )
