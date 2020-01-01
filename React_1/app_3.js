@@ -14,10 +14,16 @@ class App extends React.Component {
         return (
         <>
         <button onClick={this.handleClick}>Add A</button>
-        <h1>{this.state.text}</h1>
+        <PanelResult text={this.state.text}/>
         </>
         )
     }
+}
+
+const PanelResult = (props) => {
+    return(
+    <h1>{props.text}</h1>
+    )
 }
 
 ReactDOM.render(<App/>, document.getElementById("root"))
