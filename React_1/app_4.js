@@ -9,12 +9,18 @@ class App extends React.Component {
         })
     }
 
+    handleResetClick = () => {
+        this.setState({
+            text: ""
+        })
+    }
+
     render(){
         return (
             <React.Fragment>
-                <input placeholder= "wpisz..." onChange={this.handleInputChange.bind(this)} type="text"/>
-                <button>Reset</button>
-                <h1>{this.state.text}</h1>
+                <input text={this.state.text} placeholder= "wpisz..." onChange={this.handleInputChange.bind(this)} type="text"/>
+                <button onClick={this.handleResetClick}>Reset</button>
+                <h1>{this.state.text.toUpperCase()}</h1>
             </React.Fragment>
         )
     }
