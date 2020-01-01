@@ -4,7 +4,7 @@ class ShoppingList extends React.Component {
         items2: 'sok',
         items3: 'lemoniada'
     }
-    render ()
+    render (){
     return (
         <>
         <h1>Lista zakupów</h1>
@@ -15,7 +15,7 @@ class ShoppingList extends React.Component {
         </ul>
         </>
 
-    )
+    )}
 } 
 
 // const ItemList= (props) => {
@@ -25,10 +25,10 @@ class ShoppingList extends React.Component {
 // }
 
 class ItemList extends React.Component {
-    render ()
+    render (){
     return (
         <li>{this.props.name}</li>
     )
-}
+}}
 
 ReactDOM.render(<ShoppingList/>, document.getElementById('root'))

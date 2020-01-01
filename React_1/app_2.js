@@ -1,7 +1,7 @@
 class App extends React.Component {
-    state = (
+    state = {
         text: ""
-    )
+    }
 
     handleClick = () => {
 
@@ -10,14 +10,14 @@ class App extends React.Component {
             text: this.state.text + letter
         })
     }
-    
-    render()
+
+    render(){
     return(
         <>
         <button onClick={this.handleClick}>Dodaj A</button>
         <h1>{this.state.text}}</h1>
         </>
-    )
+    )}
 }
 
-ReactDOM.render(</App>, document.getElementById('root'))
+ReactDOM.render(App, document.getElementById('root'))
